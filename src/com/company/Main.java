@@ -17,9 +17,28 @@
 
 package com.company;
 
+import com.company.engineTypes.Ice;
+
 public class Main {
 
     public static void main(String[] args) {
-        //Vehicle sorento = new Vehicle("Kia", "Sorento", 2018, "Red", "SUV");
+        Car sorento = new Car(new Ice(), "Kia", "Sorento", 2018, "Red", "SUV", 7, false);
+
+
+        Car taurus = new Car(new Ice(), "Ford", "Taurus", 2015, "Black", "Sedan", 5, false);
+
+        Motorcycle triple = new Motorcycle(new Ice(), "Triumph", "Street Triple", 2020, "Black", "Street");
+
+        sorento.printInfo();
+        taurus.printInfo();
+        triple.printInfo();
+
+        sorento.addPassenger(8);
+        sorento.removePassenger(9);
+
+
+        taurus.startStop();
+        taurus.startStop();
+
     }
 }

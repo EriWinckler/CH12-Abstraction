@@ -1,48 +1,47 @@
 package com.company;
 
-/*
-        Start/Stop
-        Add Passengers
-        Remove Passengers
-        */
-
 public abstract class Vehicle {
 
+    private String make;
+    private String model;
     private int year;
     private String color;
     private String type;
-    private boolean isOn;
-    private int passengers;
 
-    public Vehicle(int year, String color,
+    public Vehicle(String make, String model, int year, String color,
                    String type) {
+        this.make = make;
+        this.model = model;
         this.year = year;
         this.color = color;
         this.type = type;
     }
 
-    public boolean startStop() {
-        if(isOn) {
-            return isOn = false;
-        } else {
-            return isOn = true;
-        }
-    }
+    public abstract void startStop();
 
-    public void addPassenger(int passenger) {
-        passengers = passengers + passenger;
-    }
+    public abstract void addPassenger(int passenger);
 
-    public void removePassenger(int passenger) {
-        if (passengers == 0) {
-            System.out.println("There's no passengers assign to this vehicle");
-        } else {
-            passengers = passenger - passengers;
-        }
-    }
-
-    public abstract void damaged();
+    public abstract void removePassenger(int passenger);
 
     public abstract void printInfo();
 
+    public String getMake() {
+        return make;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public String getType() {
+        return type;
+    }
 }
