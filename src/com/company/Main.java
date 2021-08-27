@@ -17,6 +17,7 @@
 
 package com.company;
 
+import com.company.engineTypes.Electric;
 import com.company.engineTypes.Ice;
 
 public class Main {
@@ -29,6 +30,8 @@ public class Main {
 
         Motorcycle triple = new Motorcycle(new Ice(), "Triumph", "Street Triple", 2020, "Black", "Street");
 
+        Car modelX = new Car(new Electric(), "Tesla", "X", 2020, "Red", "SUV", 5, true);
+
         sorento.printInfo();
         taurus.printInfo();
         triple.printInfo();
@@ -40,5 +43,6 @@ public class Main {
         taurus.startStop();
         taurus.startStop();
 
+        modelX.printInfo();
     }
 }

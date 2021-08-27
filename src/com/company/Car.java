@@ -16,10 +16,10 @@ public class Car extends Vehicle {
     @Override
     public void startStop() {
         if(isOn) {
-            System.out.println("Turning " + getModel() + " off");
+            System.out.println("Turning " + getModel() + " electronics off");
             isOn = false;
         } else {
-            System.out.println("Turning " + getModel() + " on");
+            System.out.println("Turning " + getModel() + " electronics on");
             isOn = true;
         }
     }
@@ -27,7 +27,9 @@ public class Car extends Vehicle {
     @Override
     public void addPassenger(int passenger) {
         if(passengers < maxPassengers) {
-            System.out.println("Vehicle is full");
+            System.out.println("Vehicle is full, sitting the available " +
+                    "passengers slots");
+            passengers = maxPassengers;
         } else {
             passengers = passenger + passengers;
         }

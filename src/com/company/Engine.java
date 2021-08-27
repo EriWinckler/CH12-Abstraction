@@ -69,37 +69,4 @@ public class Engine {
         isHybrid = hybrid;
     }
 
-    /*
-    private String make;
-    private int year;
-    private int displacement;
-    private int horsePower;
-    private boolean isDamaged = false;
-    private String type;
-
-    public Engine(String make, int year, int displacement, int horsePower, String type, boolean isDamaged) {
-        this.make = make;
-        this.year = year;
-        this.displacement = displacement;
-        this.horsePower = horsePower;
-        this.type = type;
-        this.isDamaged = isDamaged;
-    }
-
-    private boolean isOn = false;
-
-
-
-    public void isDamaged() {
-        if(isDamaged) {
-            System.out.println("Engine is not damaged");
-            isOn = false;
-        } else {
-            System.out.println("Engine is damaged");
-            isOn = true;
-        }
-        */
-
-
-
 }

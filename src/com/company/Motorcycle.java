@@ -12,10 +12,10 @@ public class Motorcycle extends Vehicle {
     @Override
     public void startStop() {
         if(isOn) {
-            System.out.println("Turning " + getModel() + " off");
+            System.out.println("Turning " + getModel() + " electronics off");
             isOn = false;
         } else {
-            System.out.println("Turning " + getModel() + " on");
+            System.out.println("Turning " + getModel() + " electronics on");
             isOn = true;
         }
     }
@@ -23,6 +23,7 @@ public class Motorcycle extends Vehicle {
     public void addPassenger(int passenger) {
         if(passengers > 2) {
             System.out.println("Bike is full");
+            passengers = 2;
         } else {
             passengers = passenger + passengers;
         }
